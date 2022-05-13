@@ -43,7 +43,13 @@
                     <button>SIGN-UP NOW!</button>
                     <div id="socials">
                         <p>FOLLOW US</p>
-                        <p>ICONE</p>
+                        <div id="social-icons">
+                            <a href="#"><img src="../assets/img/footer-facebook.png" alt="Facebook Logo"></a>
+                            <a href="#"><img src="../assets/img/footer-twitter.png" alt="Twitter Logo"></a>
+                            <a href="#"><img src="../assets/img/footer-youtube.png" alt="YouTube Logo"></a>
+                            <a href="#"><img src="../assets/img/footer-pinterest.png" alt="Pinterest Logo"></a>
+                            <a href="#"><img src="../assets/img/footer-periscope.png" alt="Periscope Logo"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,6 +98,11 @@ footer{
         @include space-between;
         #socials{
             @include center;
+            p{
+                margin-right: 20px;
+                color: $brand-color;
+                font-weight: bold;
+            }
         }
     }
     button{
@@ -102,5 +113,9 @@ footer{
         border: 2px solid $brand-color;
         cursor: pointer;
     }
+}
+
+#social-icons img{
+    padding: 0 5px;
 }
 </style>
