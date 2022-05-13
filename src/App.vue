@@ -5,6 +5,8 @@
 
     <MainComponent />
 
+    <FloatingComponent />
+
     <FooterComponent />
 
   </div>
@@ -14,6 +16,7 @@
 import HeaderComponent from "./components/HeaderComponent.vue";
 import MainComponent from "./components/MainComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
+import FloatingComponent from "./components/FloatingComponent.vue";
 
 
 export default {
@@ -21,7 +24,8 @@ export default {
   components: {
     HeaderComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    FloatingComponent
 }
 }
 </script>

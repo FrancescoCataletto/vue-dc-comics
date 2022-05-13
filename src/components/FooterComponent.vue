@@ -1,6 +1,8 @@
 <template>
   
-    <footer>F</footer>
+    <footer>
+        
+    </footer>
 
 </template>
 
