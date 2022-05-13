@@ -41,7 +41,7 @@
             <div id="footer-bottom">
                 <div class="container">
                     <button>SIGN-UP NOW!</button>
-                    <div>
+                    <div id="socials">
                         <p>FOLLOW US</p>
                         <p>ICONE</p>
                     </div>
@@ -61,6 +61,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/img/style/global.scss";
 @import "../assets/img/style/utilities.scss";
+@import "../assets/img/style/vars.scss";
 
 footer{
     height: 500px;
@@ -86,5 +87,20 @@ footer{
 #footer-bottom{
     height: 100px;
     background-color: rgb(48, 48, 48);
+    @include center;
+    div:first-child{
+        @include space-between;
+        #socials{
+            @include center;
+        }
+    }
+    button{
+        color: white;
+        background-color: rgb(48, 48, 48);
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid $brand-color;
+        cursor: pointer;
+    }
 }
 </style>
