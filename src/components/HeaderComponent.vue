@@ -56,21 +56,34 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/img/style/utilities.scss";
 @import "../assets/img/style/global.scss";
+@import "../assets/img/style/vars";
+
+header{
+    height: 150px;
+    display: flex;
+    align-items: center
+}
 
 #header-box{
     @include space-between;
+    height: 150px;
 }
 
 ul{
     display: flex;
     li{
         @include menu-style;
-        padding: 10px 15px;
+        padding: 0 10px;
         font-size: 12px;
         font-weight: bold;
             a{
                 @include link-underline;
                 color: black;
+                padding-bottom: 66px;
+                &:hover{
+                    color: $brand-color;
+                    border-bottom: 3px solid $brand-color;
+                }
             }
     }
 }

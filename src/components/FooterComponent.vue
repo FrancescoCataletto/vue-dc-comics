@@ -152,6 +152,9 @@ footer{
     li{
         @include menu-style;
         padding: 1px 0;
+        &:hover{
+            text-decoration: underline
+        }
         a{
             @include link-underline;
             color: white;
@@ -211,6 +214,9 @@ footer{
         font-size: 16px;
         border: 2px solid $brand-color;
         cursor: pointer;
+        &:hover{
+            background-color: $brand-color;
+        }
     }
 }
 
