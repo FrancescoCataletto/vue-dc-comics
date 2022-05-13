@@ -65,10 +65,12 @@ ul{
     display: flex;
     li{
         @include menu-style;
-        padding: 10px;
+        padding: 10px 15px;
         font-size: 12px;
+        font-weight: bold;
             a{
                 @include link-underline;
+                color: black;
             }
     }
 }

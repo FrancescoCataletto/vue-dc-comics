@@ -1,6 +1,8 @@
 <template>
 
-  <main>M</main>
+  <main>
+      <p>--> CONTENT GOES HERE </p>
+  </main>
 
 </template>
 
@@ -11,5 +13,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+main{
+    height: 200px;
+    background-color: black;
+    p{
+        color: white;
+    }
+}
 </style>
