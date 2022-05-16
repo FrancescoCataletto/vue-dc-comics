@@ -30,6 +30,9 @@ export default {
   div{
     height: 150px;
     overflow: hidden;
+    img{
+      width: 100%;
+    }
   }
 }
 
