@@ -2,79 +2,12 @@
 
   <main>
       <div id="card-main" class="container">
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
-          <div id="card-box">
-              <div id="single-card">
-                  <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX" alt="">
-              </div>
-              <p>ACTION COMICS</p>
-          </div>
+              <CardComponent v-for="(card, index) in cardArr"
+                            :key="`card-${index}`"
+                            :cardImage="card.thumb"
+                            :cardTitle="card.series"/>
       </div>
+      
       <div id="load-more">
           <button>LOAD MORE</button>
       </div>
@@ -83,8 +16,18 @@
 </template>
 
 <script>
+import CardComponent from "./CardComponent.vue";
+import cardArr from "../assets/img/data/data.js";
+
+
 export default {
-    name: "MainComponent"
+    name: "MainComponent",
+    components: { CardComponent },
+    data(){
+        return{
+            cardArr
+        }
+    }
 }
 </script>
 
@@ -102,20 +45,6 @@ main{
 #card-main{
     display: flex;
     flex-wrap: wrap;
-}
-
-#card-box{
-    width: calc(100% / 6 );
-    padding-right: 10px;
-    #single-card{
-        margin-top: 50px;
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-    }
-    p{
-        padding-top: 10px;
-    }
 }
 
 #load-more{

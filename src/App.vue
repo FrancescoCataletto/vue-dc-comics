@@ -21,7 +21,6 @@ import FooterComponent from "./components/FooterComponent.vue";
 import FloatingComponent from "./components/FloatingComponent.vue";
 import JumboComponent from "./components/JumboComponent.vue";
 
-
 export default {
   name: 'App',
   components: {
