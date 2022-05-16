@@ -3,6 +3,8 @@
     
     <HeaderComponent />
 
+    <JumboComponent />
+
     <MainComponent />
 
     <FloatingComponent />
@@ -17,6 +19,7 @@ import HeaderComponent from "./components/HeaderComponent.vue";
 import MainComponent from "./components/MainComponent.vue";
 import FooterComponent from "./components/FooterComponent.vue";
 import FloatingComponent from "./components/FloatingComponent.vue";
+import JumboComponent from "./components/JumboComponent.vue";
 
 
 export default {
@@ -25,7 +28,8 @@ export default {
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    FloatingComponent
+    FloatingComponent,
+    JumboComponent
 }
 }
 </script>
